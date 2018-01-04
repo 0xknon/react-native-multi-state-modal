@@ -1,0 +1,34 @@
+{
+  "name": "react-native-multi-state-modal",
+  "version": "0.0.1",
+  "description": "Multiple state modal for react-native",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knyuwork/react-native-multi-state-modal.git"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0"
+  },
+  "keywords": [
+    "react-native-multi-state-modal",
+    "modal",
+    "stepping",
+    "modal",
+    "multi-state",
+    "modal"
+  ],
+  "author": "knyuwork <knyuwork@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knyuwork/react-native-multi-state-modal/issues"
+  },
+  "homepage": "https://github.com/knyuwork/react-native-multi-state-modal#readme"
+}
