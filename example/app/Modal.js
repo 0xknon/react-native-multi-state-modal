@@ -53,9 +53,8 @@ export default class MultipleStateModal extends React.Component {
 
     componentWillReceiveProps(nextProps) {
 
-        let { isOpen, openHeight, closeTop } = this.props;
+        let { isOpen, openHeight, speed } = this.props;
         let openTop = height - openHeight;
-
 
         if (isOpen != undefined) {
             if (!isOpen && nextProps.isOpen) {
@@ -63,7 +62,7 @@ export default class MultipleStateModal extends React.Component {
                     this.state.top,           
                     {
                         toValue: openTop,
-                        duration: 400,             
+                        duration: speed,             
                     }
                 ).start(); 
                 this._previousTop = openTop
@@ -74,7 +73,7 @@ export default class MultipleStateModal extends React.Component {
                     this.state.top,           
                     {
                         toValue: height,
-                        duration: 400,             
+                        duration: speed,             
                     }
                 ).start(); 
                 this._previousTop = height 
@@ -136,7 +135,7 @@ export default class MultipleStateModal extends React.Component {
             this.state.top,           
             {
                 toValue: top,
-                duration: 300,             
+                duration: this.props.speed,             
             }
         ).start(); 
 

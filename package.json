@@ -1,6 +1,6 @@
 {
   "name": "react-native-multi-state-modal",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Multiple state modal for react-native",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,17 @@
     "url": "git+https://github.com/knyuwork/react-native-multi-state-modal.git"
   },
   "dependencies": {
-    "pakmanager": "^0.12.1",
-    "react": "16.0.0",
-    "react-native": "0.51.0"
+    "prop-types": "15.5.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "4.5.0",
+    "eslint-plugin-react-app": "^1.0.2",
+    "husky": "0.14.3",
+    "lint-staged": "4.0.4",
+    "prettier": "1.6.1",
+    "react": ">=15.0.0",
+    "react-native": ">=0.24.0"
   },
   "keywords": [
     "react-native-multi-state-modal",
