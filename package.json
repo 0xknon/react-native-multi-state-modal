@@ -35,7 +35,7 @@
     "modal"
   ],
   "author": "knyuwork <knyuwork@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/knyuwork/react-native-multi-state-modal/issues"
   },
