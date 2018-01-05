@@ -10,7 +10,6 @@ import {
   PanResponder
 } from 'react-native';
 
-
 const { width, height } = Dimensions.get('window');
 
 export default class MultipleStateModal extends React.Component {
@@ -53,7 +52,7 @@ export default class MultipleStateModal extends React.Component {
 
     componentWillReceiveProps(nextProps) {
 
-        let { isOpen, openHeight, closeTop } = this.props;
+        let { isOpen, openHeight, closeTop, onClose } = this.props;
         let openTop = height - openHeight;
 
 
@@ -77,6 +76,7 @@ export default class MultipleStateModal extends React.Component {
                         duration: 400,             
                     }
                 ).start(); 
+                onClose != null ? this.props.onClose() : null ;
                 this._previousTop = height 
             }
         } 
@@ -116,12 +116,12 @@ export default class MultipleStateModal extends React.Component {
     }
 
     calHeight(topPos) {
-        let { onCloseTop } = this.props;
+        let { onClose } = this.props;
         let { modalState } = this;
         for (i = 0; i < modalState.length; i++) { 
 
             if (i == modalState.length - 1) {
-                onCloseTop != null ? this.props.onCloseTop() : null ;
+                onClose != null ? this.props.onClose() : null ;
                 return modalState[i];
             } else if (topPos < ((modalState[i] + modalState[i+1]) / 2) ) {
                 return modalState[i]
@@ -159,6 +159,19 @@ export default class MultipleStateModal extends React.Component {
 
 }
 
+MultipleStateModal.propTypes = {
+    states: PropTypes.array.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    openHeight: PropTypes.number,
+    speed: PropTypes.number,
+    onClose: PropTypes.func
+};
+
+MultipleStateModal.defaultProps = {
+    openHeight: height / 2,
+    speed: 300,
+    onClose: () => null
+};
 
 const styles = StyleSheet.create({
     container: {

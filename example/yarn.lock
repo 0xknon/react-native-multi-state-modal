@@ -1661,7 +1661,7 @@ fbjs-scripts@^0.7.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.16, fbjs@^0.8.9, fbjs@~0.8.9:
+fbjs@^0.8.9, fbjs@~0.8.9:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -3158,7 +3158,7 @@ object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
 
-object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -3415,14 +3415,6 @@ prop-types@15.5.10:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
 
-prop-types@^15.5.10:
-  version "15.6.0"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 prr@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
@@ -3498,18 +3490,11 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-animatable@^1.2.3:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.4.tgz#b5fb7657e8f6edadbc26697057a327fb920b3039"
-  dependencies:
-    prop-types "^15.5.10"
-
-react-native-multi-state-modal@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/react-native-multi-state-modal/-/react-native-multi-state-modal-0.0.7.tgz#adee39c3ec763a21f4f48cb7e9df8ee091301827"
+react-native-multi-state-modal@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-multi-state-modal/-/react-native-multi-state-modal-1.0.2.tgz#78745bfbc52758624342ba0c999e43328bc0f8c5"
   dependencies:
     prop-types "15.5.10"
-    react-native-animatable "^1.2.3"
 
 react-native@^0.43.4:
   version "0.43.4"

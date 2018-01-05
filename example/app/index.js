@@ -13,8 +13,7 @@ import {
   TouchableOpacity,
   Dimensions
 } from 'react-native';
-//import Modal from 'react-native-multi-state-modal'
-import Modal from './Modal'
+import Modal from 'react-native-multi-state-modal'
 
 const { width, height } = Dimensions.get('window');
 
@@ -24,16 +23,23 @@ export default class example extends Component {
         super(props);
 
         this.state = {
-            isOpen: false
+            isOpen: false,
+            buttonText: 'Open modal'
         }
     }
 
     onPress = () => {
-        this.setState({isOpen: !this.state.isOpen})
+        this.setState({
+            isOpen: !this.state.isOpen,
+            buttonText: 'Close modal'
+        })
     }
 
     onClose = () => {
-        this.setState({isOpen: false})
+        this.setState({
+            isOpen: false,
+            buttonText: 'Open modal'
+        })
     }
 
     render() {
@@ -45,39 +51,22 @@ export default class example extends Component {
                 <TouchableOpacity 
                     style={styles.button}
                     onPress={() => this.onPress()}>
-                    <Text style={{color: 'white', fontSize: 20}}>Open modal</Text>
+                    <Text style={{color: 'white', fontSize: 20}}>{this.state.buttonText}</Text>
                 </TouchableOpacity>
                 <Modal
                     states={[ height * 3 / 16, height * 447 / 640 ]}
                     isOpen={isOpen}
                     openHeight={height * 3 / 16}
                     speed={300}
-                    onCloseTop={() => {this.onClose()}}>
+                    onClose={() => {this.onClose()}}>
                     <View style={{flex: 1}}>
-                        <Text style={{color: 'white', fontSize: 20}}>Test content</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>Test content</Text>
                     </View>
                 </Modal>
             </View>
         );
     }
 }
-
-/*
-
-                <Modal
-                    modalState={[height * 3 / 16, height * 447 / 640, height ]}
-                    isOpen={isOpen}
-                    openTop={height * 447 / 640}
-                    closeTop={height}
-                    onCloseTop={() => {this.onClose()}}>
-                    <View style={{flex: 1}}>
-                        <Text style={{color: 'white', fontSize: 20}}>Test content</Text>
-                    </View>
-                </Modal>
-
-
-*/
-
 
 const styles = StyleSheet.create({
     container: {

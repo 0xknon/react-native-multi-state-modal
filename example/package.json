@@ -9,7 +9,7 @@
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
 		"react-native": "^0.43.4",
-		"react-native-multi-state-modal": "^0.0.7"
+		"react-native-multi-state-modal": "^1.0.2"
 	},
 	"devDependencies": {
 		"babel-jest": "22.0.4",
