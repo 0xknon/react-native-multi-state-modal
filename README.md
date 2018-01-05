@@ -10,3 +10,7 @@ A simple and customisable react-native multi-state modal
 - Draggable 
 
 ## Demo
+
+<p align="center">
+<img src="https://media.giphy.com/media/d3OFXjp1MpPrLenu/giphy.gif" height="300" />
+</p>
