@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import MultiStateModal from 'react-native-multi-state-modal';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -32,6 +33,7 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <MultiStateModal />
       </View>
     );
   }
