@@ -9,19 +9,12 @@ import {
   Animated,
   PanResponder
 } from 'react-native';
-import { connect } from 'react-redux';
-
-import TaskList from '../../screens/TaskList';
-import { headerHeight, footerHeight, taskItemHeight, maxItemsShowOnTaskList, taskDetailHeight } from '../../config/appConfig';
-
 import styles from './styles';
 
 
-const userIconPlaceholder = require('../../img/userIconPlaceholder.png');
-const userIconLength = headerHeight*5/10;
 const { width, height } = Dimensions.get('window');
 
-class MultipleStateModal extends React.Component {
+export default class MultipleStateModal extends React.Component {
 
     _panResponder =  {}
     _previousTop = 0
@@ -155,16 +148,3 @@ class MultipleStateModal extends React.Component {
     }
 
 }
-
-
-
-const mapStateToProps = (state) => {
-	return {
-        numberOfTask: state.task.taskList.length,
-        isTaskDetailDrawerOpen: state.task.isTaskDetailDrawerOpen
-	}
-}
-
-
-
-export default connect(mapStateToProps)(MultipleStateModal)
