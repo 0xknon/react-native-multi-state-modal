@@ -143,9 +143,9 @@ export default class MultipleStateModal extends React.Component {
     render() {
         return (
             <Animated.View 
-                style={[
-                    this.props.style, 
-                    styles.container, {top: this.state.top}
+                style={[ 
+										styles.container, {top: this.state.top}, 
+                    this.props.style
                 ]}
                 {...this._panResponder.panHandlers}>
                 {this.props.children}

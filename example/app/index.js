@@ -19,53 +19,55 @@ const { width, height } = Dimensions.get('window');
 
 export default class example extends Component {
 
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            isOpen: false,
-            buttonText: 'Open modal'
-        }
-    }
+		this.state = {
+			isOpen: false,
+			buttonText: 'Open modal'
+		}
+	}
 
-    onPress = () => {
-        this.setState({
-            isOpen: !this.state.isOpen,
-            buttonText: 'Close modal'
-        })
-    }
+	onPress = () => {
+		this.setState({
+			isOpen: !this.state.isOpen,
+			buttonText: 'Close modal'
+		})
+	}
 
-    onClose = () => {
-        this.setState({
-            isOpen: false,
-            buttonText: 'Open modal'
-        })
-    }
+	onClose = () => {
+		this.setState({
+			isOpen: false,
+			buttonText: 'Open modal'
+		})
+	}
 
-    render() {
+	render() {
 
-        let { isOpen } = this.state;
+		let { isOpen } = this.state;
 
-        return (
-            <View style={styles.container}>
-                <TouchableOpacity 
-                    style={styles.button}
-                    onPress={() => this.onPress()}>
-                    <Text style={{color: 'white', fontSize: 20}}>{this.state.buttonText}</Text>
-                </TouchableOpacity>
-                <Modal
-                    states={[ height * 3 / 16, height * 447 / 640 ]}
-                    isOpen={isOpen}
-                    openHeight={height * 3 / 16}
-                    speed={300}
-                    onClose={() => {this.onClose()}}>
-                    <View style={{flex: 1}}>
-                        <Text style={{color: 'black', fontSize: 20}}>Test content</Text>
-                    </View>
-                </Modal>
-            </View>
-        );
-    }
+		return (
+			<View style={styles.container}>
+				<View style={{flex: 1}} >
+					<TouchableOpacity 
+						style={styles.button}
+						onPress={() => this.onPress()}>
+						<Text style={{color: 'white', fontSize: 20}}>{this.state.buttonText}</Text>
+					</TouchableOpacity>
+				</View>
+				<Modal
+					states={[ height * 3 / 16, height * 447 / 640 ]}
+					isOpen={isOpen}
+					openHeight={height * 3 / 16}
+					speed={300}
+					onClose={() => {this.onClose()}}>
+					<View style={{flex: 1}}>
+						<Text style={{color: 'black', fontSize: 20}}>Test content</Text>
+					</View>
+				</Modal>
+			</View>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
