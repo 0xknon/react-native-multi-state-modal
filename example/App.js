@@ -1,25 +1,20 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
+ *
+ * @format
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Dimensions
-} from 'react-native';
+import React, {Component} from 'react';
+import {Dimensions, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-multi-state-modal'
 
 const { width, height } = Dimensions.get('window');
 
-export default class example extends Component {
-
-	constructor(props) {
+type Props = {};
+export default class App extends Component<Props> {
+  constructor(props) {
 		super(props);
 
 		this.state = {
@@ -56,6 +51,7 @@ export default class example extends Component {
 					</TouchableOpacity>
 				</View>
 				<Modal
+					style={{backgroundColor: 'white'}}
 					states={[ height * 3 / 16, height * 447 / 640 ]}
 					isOpen={isOpen}
 					openHeight={height * 3 / 16}

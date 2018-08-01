@@ -1,6 +1,6 @@
 {
   "name": "react-native-multi-state-modal",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Multiple state modal for react-native",
   "main": "index.js",
   "directories": {
@@ -23,8 +23,8 @@
     "husky": "0.14.3",
     "lint-staged": "4.0.4",
     "prettier": "1.6.1",
-    "react": ">=15.0.0",
-    "react-native": ">=0.24.0"
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.54"
   },
   "keywords": [
     "react-native-multi-state-modal",
