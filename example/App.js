@@ -18,7 +18,7 @@ export default class App extends Component<Props> {
 		super(props);
 
 		this.state = {
-			isOpen: false,
+			stateIndex: 0,
 			buttonText: 'Open modal'
 		}
 	}
@@ -30,33 +30,25 @@ export default class App extends Component<Props> {
 		})
 	}
 
-	onClose = () => {
-		this.setState({
-			isOpen: false,
-			buttonText: 'Open modal'
-		})
-	}
 
 	render() {
 
-		let { isOpen } = this.state;
+		let { stateIndex } = this.state;
 
 		return (
 			<View style={styles.container}>
 				<View style={{flex: 1}} >
 					<TouchableOpacity 
 						style={styles.button}
-						onPress={() => this.onPress()}>
+						onPress={() => this.setState({stateIndex: stateIndex == 0? 1 : 0})}>
 						<Text style={{color: 'white', fontSize: 20}}>{this.state.buttonText}</Text>
 					</TouchableOpacity>
 				</View>
 				<Modal
-					style={{backgroundColor: 'white'}}
-					states={[ height * 3 / 16, height * 447 / 640 ]}
-					isOpen={isOpen}
-					openHeight={height * 3 / 16}
-					speed={300}
-					onClose={() => {this.onClose()}}>
+					style={{backgroundColor: 'white', left: 0, right: 0}}
+					states={[0, height * 3 / 16, height * 447 / 640 ]}
+					stateIndex={stateIndex}
+					speed={300} >
 					<View style={{flex: 1}}>
 						<Text style={{color: 'black', fontSize: 20}}>Test content</Text>
 					</View>
@@ -67,16 +59,16 @@ export default class App extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    button: {
-        paddingHorizontal: 12, 
-        paddingVertical: 6, 
-        backgroundColor: 'grey'
-    }
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#F5FCFF',
+	},
+	button: {
+		paddingHorizontal: 12, 
+		paddingVertical: 6, 
+		backgroundColor: 'grey'
+	}
 });
 

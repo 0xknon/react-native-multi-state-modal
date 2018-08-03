@@ -116,8 +116,7 @@ For a more complex example take a look at the /example directory.
 | Name | Type| Default | Required | Description |
 | --- | --- | --- | --- | --- |
 | states | array | NA | Yes | Array oh height of each state in ascending order |
-| isOpen | bool | NA | Yes | Open model? |
-| openHeight | number | screenHeight / 2 | No | Initial height when the modal is opened|
+| stateIndex | number | NA | Yes | State index  |
+| enableDrag | boolean | true | No | set it to true to enable drag  |
 | speed | number | 300 | No | Speed during transition between states |
-| onClose | func | null | No | Called when the modal is closed |
-
+| onPress | func | null | No | if onPress is not null and enableDrag is false, this function will be triggered |
