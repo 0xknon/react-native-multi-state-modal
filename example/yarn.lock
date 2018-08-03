@@ -4127,9 +4127,9 @@ react-is@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"
 
-react-native-multi-state-modal@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-multi-state-modal/-/react-native-multi-state-modal-1.2.0.tgz#fc21620064ff7ff14c164be88089826e993c005c"
+react-native-multi-state-modal@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-native-multi-state-modal/-/react-native-multi-state-modal-1.2.2.tgz#980557942ffcbb25fb77a14fc47017c51be97ff1"
   dependencies:
     prop-types "15.5.10"
 
