@@ -105,7 +105,7 @@ export default class MultipleStateModal extends React.Component {
 			this.state.height,           
 			{
 				toValue: this.modalState[index],
-				duration: this.props.speed,             
+				duration: 400,             
 			}
 		).start(); 
 		

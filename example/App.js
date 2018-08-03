@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Dimensions, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-multi-state-modal'
@@ -23,18 +15,9 @@ export default class App extends Component<Props> {
 		}
 	}
 
-	onPress = () => {
-		this.setState({
-			isOpen: !this.state.isOpen,
-			buttonText: 'Close modal'
-		})
-	}
-
-
 	render() {
 
 		let { stateIndex } = this.state;
-
 		return (
 			<View style={styles.container}>
 				<View style={{flex: 1}} >
@@ -45,10 +28,11 @@ export default class App extends Component<Props> {
 					</TouchableOpacity>
 				</View>
 				<Modal
-					style={{backgroundColor: 'white', left: 0, right: 0}}
+					style={{backgroundColor: 'white'}}
 					states={[0, height * 3 / 16, height * 447 / 640 ]}
 					stateIndex={stateIndex}
-					speed={300} >
+					speed={300} 
+					onIndexChange={(index) => this.setState({stateIndex: index})} >
 					<View style={{flex: 1}}>
 						<Text style={{color: 'black', fontSize: 20}}>Test content</Text>
 					</View>

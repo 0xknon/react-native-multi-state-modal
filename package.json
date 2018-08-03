@@ -1,6 +1,6 @@
 {
   "name": "react-native-multi-state-modal",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Multiple state modal for react-native",
   "main": "index.js",
   "directories": {
