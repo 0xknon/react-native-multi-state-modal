@@ -31,7 +31,7 @@
     "lint-staged": "4.0.4",
     "prettier": "1.6.1",
     "react": "16.8.6",
-    "react-native": "0.60",
+    "react-native": "0.62",
     "react-native-typescript-transformer": "^1.2.13",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
